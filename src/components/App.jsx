@@ -47,7 +47,7 @@ export class App extends Component {
 
     const countTotalFeedback = good + neutral + bad;
     const countPositiveFeedbackPercentage =
-      countTotalFeedback > 0
+      this.countTotalFeedback > 0
         ? Math.round((good / countTotalFeedback) * 100)
         : 0;
     return (
@@ -67,14 +67,6 @@ export class App extends Component {
             onLeaveFeedback={this.updateFeedback}
           />
 
-          {/* <FeedbackOptions
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            updateGood={this.updateGood}
-            updateNeutral={this.updateNeutral}
-            updateBad={this.updateBad}
-          /> */}
         </Section>
 
         <Section title=" Statistics">
